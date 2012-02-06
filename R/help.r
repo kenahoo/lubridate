@@ -22,9 +22,9 @@
 #' 
 #' Lubridate distinguishes between moments in time (known as 
 #' \code{\link{instants}}) and spans of time (known as 
-#' \code{\link{timespans}}). Time spans are further separated into  
-#' \code{\link{durations}}, \code{\link{periods}} and 
-#' \code{\link{intervals}}.
+#' \code{\link{Timespan-class}}). Time spans are further separated into  
+#' \code{\link{Duration-class}}, \code{\link{Period-class}} and 
+#' \code{\link{Interval-class}}.
 #'
 #' Instants
 #'
@@ -77,16 +77,12 @@
 #' a particular instant. For example, three months or an hour and 
 #' a half. Base R uses difftime class objects to record timespans. 
 #' Lubridate creates three more timespan classes, 
-#' \code{\link{intervals}}, \code{\link{periods}} and 
-#' \code{\link{durations}}, to better navigate the nuances of 
+#' \code{\link{Interval-class}}, \code{\link{Period-class}} and 
+#' \code{\link{Duration-class}}, to better navigate the nuances of 
 #' time. \code{\link{is.difftime}} tests whether an object 
 #' inherits from the difftime class. \code{\link{is.timespan}} 
 #' tests whether an object inherits from any of the four timespan 
-#' classes. Lubridate alters the subtraction method for dates to 
-#' create interval objects, which can be used like difftimes but 
-#' preserve more information than difftimes. To create a difftime 
-#' with lubridate use \code{\link{make_difftime}} instead of 
-#' subtraction.
+#' classes. 
 #'
 #'
 #' Durations
